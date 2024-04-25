@@ -14,7 +14,7 @@ serde_json = "1.0"
 diesel = { version = "2.1.0", features = ["postgres"] }
 chrono = {version = "0.4", features = ["serde"] }
 dotenvy = "0.15"
-bigdecimal = "0.2"
+bigdecimal = bigdecimal::BigDecimal with feature = ["numeric"]
 
 [dev-dependencies]
 reqwest = { version = "0.11", features = ["json", "blocking"]}
