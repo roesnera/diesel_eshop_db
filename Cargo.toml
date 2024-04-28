@@ -9,12 +9,17 @@ edition = "2021"
 rocket = { version = "0.5.0-rc", features = ["json"] }
 rocket_sync_db_pools = { version = "0.1.0-rc", features = ["diesel_postgres_pool"]}
 rocket_db_pools = { version = "0.1.0-rc", features = ["deadpool_redis"]}
+
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-diesel = { version = "2.1.0", features = ["postgres"] }
+diesel = { version = "2.1.0", features = ["postgres", "numeric", "chrono"] }
 chrono = {version = "0.4", features = ["serde"] }
 dotenvy = "0.15"
-bigdecimal = bigdecimal::BigDecimal with feature = ["numeric"]
+bigdecimal = { version = "0.4", features = ["serde"] }
+reqwest = { version = "0.11", features = ["json", "blocking"]}
+argon2 = "0.5"
+rand = "0.8"
+log = "0.4"
+rocket-multipart-form-data = "0.10.7"
 
 [dev-dependencies]
-reqwest = { version = "0.11", features = ["json", "blocking"]}
