@@ -1,7 +1,7 @@
 use std::fs;
 
 use rocket::{data::Data, http::ContentType, serde::json::{Json, Value, serde_json::json}, response::status::{Custom, NoContent}, http::Status};
-use rocket_multipart_form_data::{FileField, MultipartFormData, MultipartFormDataField, MultipartFormDataOptions};
+use rocket_multipart_form_data::{MultipartFormData, MultipartFormDataField, MultipartFormDataOptions};
 
 use crate::{models::{Image, NewImage}, repository::ImageRepository, rocket_routes::AdminUser};
 use crate::rocket_routes::DbConn;
